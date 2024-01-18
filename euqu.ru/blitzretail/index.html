@@ -1,7 +1,10 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="Content-Type"
             content="text/html; charset=utf-8"><meta name="viewport"
             content="width=device-width, initial-scale=1.0">
-        <!--metatextblock--><title>Сеть салонов «Блиц»</title><meta
+        <!--metatextblock--><title>Сеть салонов «Блиц»</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.js"></script>
+        
+        <meta
             property="og:url" content="https://euqu.ru/blitzretail"><meta
             property="og:title" content="Сеть салонов «Блиц»"><meta
             property="og:description" content><meta property="og:type"
@@ -181,7 +184,10 @@ t602_init('347985263');
                                             alt="Главная"></a></div></div></div><div
                             class="t454__leftwrapper"
                             style="padding-left:20px; padding-right:80px; "><nav
-                                class="t454__leftmenuwrapper"><ul role="list"
+                                class="t454__leftmenuwrapper">
+                                
+                                
+                                <ul role="list"
                                     class="t454__list t-menu__list"><li
                                         class="t454__list_item"
                                         style="padding:0 15px 0 0;"><a
@@ -199,12 +205,32 @@ t602_init('347985263');
                                             style="color:#ffffff;font-size:14px;">Каталог
                                             товаров</a></li><li
                                         class="t454__list_item"
-                                        style="padding:0 0 0 15px;"><a
-                                            class="t-menu__link-item"
-                                            href="#calculator"
-                                            data-menu-submenu-hook
-                                            data-menu-item-number="4"
-                                            style="color:#ffffff;font-size:14px;">Акции</a></li></ul></nav></div><div
+                                        style="padding:0 0 0 15px;"><a class="t-menu__link-item" href="#" data-menu-submenu-hook data-menu-item-number="4" style="color:#ffffff; font-size:14px;" onclick="openPopup(event)">Акции</a></li></ul></nav></div>
+
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        <div
                             class="t454__rightwrapper"
                             style="padding-right:20px; padding-left:80px; "><nav
                                 class="t454__rightmenuwrapper"><ul
@@ -229,7 +255,13 @@ t602_init('347985263');
                                             href="#contacts"
                                             data-menu-submenu-hook
                                             style="color:#ffffff;font-size:14px;"
-                                            data-menu-item-number="8">Контакты</a></li></ul></nav></div></div></div><style>@media screen and (max-width: 980px) {
+                                            data-menu-item-number="8">Контакты</a></li></ul></nav></div></div></div>
+                                            
+                                            
+                                            
+                                            
+                                            
+                                            <style>@media screen and (max-width: 980px) {
 #rec348383090 .t454__leftcontainer{
 padding: 20px;
 }
@@ -293,7 +325,89 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', en
 }
 </style>
 
-                        </div> </div></div></div><div id="rec347985265"
+                        </div> </div></div></div>
+                        <style>
+                            /* Styles for the popup */
+                            #popup {
+                              display: none;
+                              position: fixed;
+                              top: 50%;
+                              left: 50%;
+                              transform: translate(-50%, -50%);
+                              z-index: 9999;
+                              background-color: rgba(128, 128, 128, 0.8); /* Semi-transparent gray background */
+                              padding: 20px;
+                              border-radius: 10px;
+                              box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+                              max-width: 900px; /* Adjust the maximum width as needed */
+                              width: 100%;
+                              text-align: center;
+                            }
+                          
+                            .t-popup__overlay {
+                              position: fixed;
+                              top: 0;
+                              left: 0;
+                              width: 100%;
+                              height: 100%;
+                              background-color: rgba(0, 0, 0, 0.5);
+                              z-index: 9998;
+                            }
+                          
+                            .t-popup__close {
+                              position: absolute;
+                              top: 10px;
+                              right: 10px;
+                              cursor: pointer;
+                              font-size: 20px;
+                              color: #333;
+                            }
+                          
+                            .t-popup__content {
+                              padding: 20px;
+                            }
+                          
+                            /* Optional: Add styles for the image */
+                            .popup-image {
+                              max-width: 100%;
+                              height: auto;
+                              border-radius: 8px;
+                              margin-bottom: 15px;
+                            }
+                            @media (max-width: 767px) {
+                                #popup {
+                                  max-width: 50%;
+                                  padding: 10px;
+                                }
+                              }
+                          </style>
+                          
+                          <div id="popup">
+                            <div class="t-popup__close" onclick="closePopup()">&#10005;</div>
+                            <div class="t-popup__container">
+                              <div class="t-popup__content">
+                                <div class="t001__title t-title t-title_xl t-animate" style="color: black" field="title">Наши Акции</div>
+                                <img src="winter24.jpg" alt="Special Offer" class="popup-image">
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <script>
+                            function openPopup(event) {
+                              event.preventDefault(); // Prevent the default behavior of the link
+                              document.getElementById('popup').style.display = 'block';
+                              document.body.style.overflow = ''; // Prevent scrolling when the popup is open
+                            }
+                          
+                            // Function to close the popup
+                            function closePopup() {
+                              document.getElementById('popup').style.display = 'none';
+                              document.body.style.overflow = ''; // Restore scrolling when the popup is closed
+                            }
+                          </script>
+                          
+
+                        <div id="rec347985265"
                 class="r t-rec t-rec_pt_0 t-rec_pb_0 t-screenmax-980px"
                 style="padding-top:0px;padding-bottom:0px; "
                 data-animationappear="off" data-record-type="450"
@@ -658,40 +772,13 @@ right: 0;
                                             data-menu-item-number="5"
                                             style="color:#ffffff;font-size:20px;">Примеры
                                             работ</a></li><li
-                                        class="t450__list_item"><a
-                                            class="t-menu__link-item " href="#"
-                                            data-menu-submenu-hook
-                                            data-menu-item-number="7"
-                                            style="color:#ffffff;font-size:20px;">Акции</a></li><li
-                                        class="t450__list_item"><a
-                                            class="t-menu__link-item "
-                                            href="#askdesigner"
-                                            data-menu-submenu-hook
-                                            data-menu-item-number="8"
-                                            style="color:#ffffff;font-size:20px;">Вопрос</a></li><li
-                                        class="t450__list_item"><a
-                                            class="t-menu__link-item "
-                                            href="#certificates"
-                                            data-menu-submenu-hook
-                                            data-menu-item-number="9"
-                                            style="color:#ffffff;font-size:20px;">Cертификаты</a></li><li
-                                        class="t450__list_item"><a
-                                            class="t-menu__link-item "
-                                            href="#halva" data-menu-submenu-hook
-                                            data-menu-item-number="10"
-                                            style="color:#ffffff;font-size:20px;">Рассрочка</a></li><li
+                                        class="t450__list_item"><a class="t-menu__link-item" href="#" data-menu-submenu-hook data-menu-item-number="4" style="color:#ffffff; font-size:20px;" onclick="openPopup(event)">Акции</a>></li><li
                                         class="t450__list_item"><a
                                             class="t-menu__link-item "
                                             href="#reviews"
                                             data-menu-submenu-hook
                                             data-menu-item-number="11"
                                             style="color:#ffffff;font-size:20px;">Отзывы</a></li><li
-                                        class="t450__list_item"><a
-                                            class="t-menu__link-item "
-                                            href="#partners"
-                                            data-menu-submenu-hook
-                                            data-menu-item-number="12"
-                                            style="color:#ffffff;font-size:20px;">Партнёры</a></li><li
                                         class="t450__list_item"><a
                                             class="t-menu__link-item "
                                             href="#wholesale"
@@ -1829,19 +1916,19 @@ t796_init('348448519');
 </style>
 <div id="newDiv" class="r t-rec" style=" " data-animationappear="off" data-record-type="18">
     <!-- cover -->
-    <div class="t-cover" id="recorddivNewDiv" bgimgfield="img" style="height:150vh; background-image:url('photo_2024-01-15_17-23-42.jpg');">
+    <div class="t-cover" id="recorddivNewDiv" bgimgfield="img" style="height:130vh; background-image:url('photo_2024-01-15_17-23-42.jpg');">
         <div class="t-cover__carrier" id="coverCarryNewDiv" data-content-cover-id="recorddivNewDiv" data-content-cover-bg="photo_2024-01-15_17-23-42.jpg" data-display-changed="true" data-content-cover-height="100vh" data-content-cover-parallax="fixed" style="height:100vh;" itemscope itemtype="http://schema.org/ImageObject">
             <meta itemprop="image" content="path-to-your-new-background-image.jpg">
         </div>
-        <div class="t-cover__filter" style="height: 150vh;background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgb(255, 255, 255));"></div>
+        <div class="t-cover__filter" style="height: 130vh;background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgb(255, 255, 255));"></div>
         <div class="t-container">
             <div class="t-col t-col_12">
-                <div class="t-cover__wrapper t-valign_middle" style="height:150vh;">
+                <div class="t-cover__wrapper t-valign_middle" style="height:130vh;">
                     <div class="t001 t-align_center">
                         <div class="t001__wrapper" data-hook-content="covercontent">
                             <div class="t001__uptitle t-uptitle t-uptitle_sm t-animate" data-animate-style="zoomin" data-animate-group="yes" field="subtitle"></div>
                             <div class="t001__title t-title t-title_xl t-animate" data-animate-style="fadeinup" data-animate-group="yes" field="title" style="color: black;">Химчистка штор</div>
-                            <div class="t001__descr t-descr t-descr_xl t-animate" data-animate-style="zoomin" data-animate-group="yes" field="descr">Даже при отсутствии заметных пятен, мы рекомендуем регулярно чистить шторы. Это позволяет избавиться от пыли и загрязнений, вернуть первоначальный цвет и продлить срок жизни текстиля. Наша компания владеет большим опытом работы с деликатными тканями и оказывает соответствующий комплекс услуг, включающий снятие, чистку, доставку, отпаривание и навеску изделий.</div>
+                            <div class="t001__descr t-descr t-descr_xl t-animate" data-animate-style="zoomin" data-animate-group="yes" field="descr" style="padding-top: 100px;">Даже при отсутствии заметных пятен, мы рекомендуем регулярно чистить шторы. Это позволяет избавиться от пыли и загрязнений, вернуть первоначальный цвет и продлить срок жизни текстиля. Наша компания владеет большим опытом работы с деликатными тканями и оказывает соответствующий комплекс услуг, включающий снятие, чистку, доставку, отпаривание и навеску изделий.</div>
                             <span class="space"></span>
                         </div>
                     </div>
