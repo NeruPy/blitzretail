@@ -143,7 +143,26 @@ sessionStorage.setItem("visited", "y");
 } 
 document.addEventListener('DOMContentLoaded', t_setvisRecs);
 }
-})();</script></head><body class="t-body"
+})();</script></head>
+<style>
+    #recorddivNewDiv .t001__descr {
+        font-size: 48px; /* Default font size for larger screens */
+        overflow:auto;
+    }
+
+    @media (max-width: 767px) {
+        #recorddivNewDiv .t001__descr {
+            font-size: 24px; /* Adjust the font size for smaller screens */
+            overflow: auto;
+        }
+    }
+    @media (max-width: 767px) {
+         .t001__descr {
+            font-size: 24px; /* Adjust the font size for smaller screens */
+            overflow: auto;
+        }
+    }
+</style><body class="t-body"
         style="margin:0;"><!--allrecords--><div id="allrecords"
             class="t-records" data-hook="blocks-collection-content-node"
             data-tilda-project-id="4710509" data-tilda-page-id="21516252"
@@ -425,7 +444,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', en
                     data-hideoffset><div
                         class="t450__burger_container t450__small "><div
                             class="t450__burger_bg t450__burger_cirqle"
-                            style="; opacity:0.50;"></div><button type="button"
+                            style="opacity:0.50;"></div><button type="button"
                             class="t-menuburger t-menuburger_first t-menuburger__small"
                             aria-label="Навигационное меню"
                             aria-expanded="false"><span
