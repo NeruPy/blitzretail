@@ -376,7 +376,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', en
                             }
                             @media (max-width: 767px) {
                                 #popup {
-                                  max-width: 50%;
+                                  max-width: 75%;
                                   padding: 10px;
                                 }
                               }
@@ -393,10 +393,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#D9000000', en
                           </div>
                           
                           <script>
+                            // Function to open the popup
                             function openPopup(event) {
                               event.preventDefault(); // Prevent the default behavior of the link
                               document.getElementById('popup').style.display = 'block';
-                              document.body.style.overflow = ''; // Prevent scrolling when the popup is open
+                          
+                              // Load the image when the popup is opened
+                              var popupImage = document.getElementById('popupImage');
+                              if (popupImage && popupImage.getAttribute('data-src')) {
+                                popupImage.src = popupImage.getAttribute('data-src');
+                                popupImage.removeAttribute('data-src');
+                              }
+                          
+                              document.body.style.overflow = 'hidden'; // Prevent scrolling when the popup is open
                             }
                           
                             // Function to close the popup
